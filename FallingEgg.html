@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(images/back.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            /* height: 100vh; */
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
+        section {
+            z-index: 5;
+        }
+
+        .score-content {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 25px;
+
+        }
+
+        .flip {
+            transform: rotateY(180deg)
+        }
+
+        img {
+            position: absolute;
+        }
+
+        .smooth {
+            transition: all 0.2s !important;
+            opacity: 1 !important;
+        }
+
+        #egg,
+        #broken {
+            opacity: 1;
+            transition: opacity 0.4s;
+            /* transition: opacity 0.4s; */
+            left: 0;
+            top: 0;
+
+        }
+
+        button {
+            font-size: 30px;
+            background-color: red;
+            color: #fff;
+            border-radius: 10px;
+            margin-top: 30px;
+            padding: 10px 25px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: all 0.4s;
+        }
+
+        button:hover {
+            background-color: gray;
+            color: #333;
+
+        }
+
+        #basket {
+            left: 0;
+            width: 250px;
+            height:250px;
+            transition: all 0.1s;
+            bottom: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <!-- button -->
+        <div>
+            <button class="start">Start Game</button>
+            <button class="stop">Stop Game</button>
+        </div>
+        <!-- score -->
+        <div class="score-content">
+            <h2>Your Score</h2>
+            <h2 class="score">0</h2>
+        </div>
+    </section>
+    
+    <img src="images/egg.png" width="150" height="150" id="egg" />
+    <img src="images/basket.png" id="basket" />
+    <script src="code.js"></script>
+</body>
+
+</html>
